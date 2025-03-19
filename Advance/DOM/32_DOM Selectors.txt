@@ -96,7 +96,7 @@ OUTPUT
 INPUT
 document. querySelector(' test')
 OUTPUT
-<h1 id="title" class="test" style="background-color: green; ">( </h1>
+<h1 id="title" class="test" style="background-color: green; "> </h1>
 
 ------------------------------------------------------------------
 6.To select attributes of elements using  .querySelector()  note: "#" --> id,  "." --> class 
