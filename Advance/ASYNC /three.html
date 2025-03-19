@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur code</h1>
+    <button id="start">start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+     
+     /* code to print text with an interval of 1 second when clicked upon start
+     and to stop the code when clicked on stop*/
+
+
+    let startInt
+    const myNAme = function(){console.log(`My name is Arnav and I am the best programmer in JS you will ever find`, Date.now()) }
+
+   
+    const startName = function(){
+        if(!startInt){  //condition to check if the value is not "startInt" then I want to add
+            startInt = setInterval(myNAme,1000)}
+
+        }
+     
+    const stopName = function() { clearInterval(startInt)
+        startInt = null;
+     }
+   
+   document.querySelector('#start').addEventListener('click', startName)
+   document.querySelector('#stop').addEventListener('click', stopName)
+
+   
+
+</script>
+</html>
+

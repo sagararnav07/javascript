@@ -1,0 +1,74 @@
+all javascript datatypes
+
+JavaScript has several built-in data types that can be broadly categorized into primitive types and object types. Here's an overview:
+
+### 1. **Primitive Data Types**
+
+   Primitive types are immutable (i.e., their values cannot be changed) and are accessed by value.
+
+   - **`String`**: Represents textual data. Strings are sequences of characters, enclosed in single quotes (`'`), double quotes (`"`), or backticks (`` ` ``).
+     - Example: `'hello'`, `"world"`, `` `template literal` ``
+
+   - **`Number`**: Represents both integer and floating-point numbers. JavaScript does not have separate types for integers and floats.
+     - Example: `42`, `3.14`, `-0.5`
+
+   - **`BigInt`**: Represents integers with arbitrary precision. Useful for working with large integers beyond the safe range of the `Number` type.
+     - Example: `1234567890123456789012345678901234567890n`
+
+   - **`Boolean`**: Represents logical values: `true` or `false`.
+     - Example: `true`, `false`
+
+   - **`Undefined`**: Represents the absence of a defined value. A variable that has been declared but not assigned a value has the type `undefined`.
+     - Example: `let x; console.log(x); // undefined`
+
+   - **`Null`**: Represents the intentional absence of any object value. It is one of the primitive types, but when used in `typeof`, it returns `"object"` (this is a historical bug in JavaScript).
+     - Example: `let y = null;`
+
+   - **`Symbol`**: Represents a unique identifier. Symbols are often used as keys in objects to avoid name collisions.
+     - Example: `let sym = Symbol('unique');`
+
+### 2. **Object Data Types**
+
+   Objects are collections of properties, where each property has a key (usually a string or `Symbol`) and a value. Objects are mutable and are accessed by reference.
+
+   - **`Object`**: The most basic object type that can represent collections of key-value pairs. Objects can be created using curly braces (`{}`) or the `new Object()` constructor.
+     - Example: `let obj = { name: 'Alice', age: 30 };`
+
+   - **`Array`**: A special type of object used to store ordered collections of items. Arrays can hold any data type and are indexed by numbers.
+     - Example: `let arr = [1, 'two', true];`
+
+   - **`Function`**: A special type of object that can be invoked. Functions can be declared or created as function expressions, and they can be assigned to variables, passed as arguments, or returned from other functions.
+     - Example: `function greet() { return 'Hello'; }`
+
+   - **`Date`**: Represents dates and times. JavaScript provides the `Date` object for handling date and time data.
+     - Example: `let date = new Date();`
+
+   - **`RegExp`**: Represents regular expressions, which are patterns used for matching character combinations in strings.
+     - Example: `let regex = /ab+c/;`
+
+   - **`Map`**: A collection of key-value pairs where the keys can be of any type (including objects and primitive values).
+     - Example: `let map = new Map(); map.set('key', 'value');`
+
+   - **`Set`**: A collection of unique values. Values in a `Set` can be of any type, including objects and primitives.
+     - Example: `let set = new Set([1, 2, 3]);`
+
+   - **`WeakMap`**: Similar to `Map`, but the keys must be objects, and references to key-value pairs in a `WeakMap` are held weakly, meaning they can be garbage collected if there are no other references to the key.
+     - Example: `let weakMap = new WeakMap();`
+
+   - **`WeakSet`**: Similar to `Set`, but all elements must be objects, and like `WeakMap`, it holds weak references to its elements.
+     - Example: `let weakSet = new WeakSet();`
+
+### 3. **Special Data Type: `typeof` Operator**
+   
+   - **`typeof`**: The `typeof` operator is used to determine the type of a given value or variable.
+     - Example: `typeof 'hello'; // 'string'`
+     - Example: `typeof 42; // 'number'`
+     - Example: `typeof undefined; // 'undefined'`
+     - Example: `typeof null; // 'object'` (This is a quirk in JavaScript)
+
+### Summary
+
+- **Primitive types**: `String`, `Number`, `BigInt`, `Boolean`, `Undefined`, `Null`, `Symbol`
+- **Object types**: `Object`, `Array`, `Function`, `Date`, `RegExp`, `Map`, `Set`, `WeakMap`, `WeakSet`
+
+Understanding these data types is fundamental to writing effective JavaScript code, as they determine how data is stored, accessed, and manipulated in your programs.

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai or Code Arnav</title>
+</head>
+<body style= "background-color: black; color: azure;">
+    <script>
+const div = document.createElement('div') //Create a div
+console.log(div); //console
+div.className = "main"  //assigning className
+div.id = Math.round (Math.random () * 10 + 1)  //assigning ID
+
+//All above given attributes are basic like "className" and "id"
+//but if you want to se custom Attribute to your element you can use
+//.setAttribute
+div.setAttribute("title", "generated title") 
+div.style.backgroundColor = "green" 
+div.style.padding = "12px"
+
+//To attach the div
+
+//1st Method
+div. innerText = "Chai aur code"
+//2nd Mathod
+const addText = document.createTextNode ("Chai aur code")
+div.appendChild(addText)
+document.body.appendChild(div)
+</script>
+    
+</body>
+</html>

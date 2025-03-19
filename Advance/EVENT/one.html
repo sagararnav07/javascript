@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html Events </title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+<script>
+
+   1 /*  event :- In JavaScript, an event is an action or occurrence that happens in the browser, 
+    such as a user clicking a button, a page finishing loading, or an error occurring.*/
+   
+    /*Now it has many approaches and we will discuss it all and chose the best one
+  
+     1. Using event ".onclick" directly in the html file :- onclick = "alert('owl')"  // Not good approach
+     <li><img width="200px" id="owl" src="" alt="" onclick = "alert('owl')">
+     2.Using event ".onclick" as a funvtion, the correct way should be to use "eventListeners"*/
+
+    // document.getElementById("owl").onclick = function(){
+    //      alert('owl clicked')} 
+
+    // 3. Most preferable approach :- using "eventListeners" gives you the ability of propogation
+    /* .addEventListener() :- in JavaScript is a method used to attach an event handler to a specified element. 
+    This method listens for specific events (like click, keydown, etc.) on the element and triggers the attached function when the event occurs.*/ 
+
+   // document.getElementById('owl').addEventListener('click',function(){
+       // alert("you have clicked on the owl") }) 
+
+   2 /*eventObject :- When an event is triggered, the browser creates an Event object that contains detailed
+     information about the event and passes it to the event handler function. 
+    This allows developers to access specific details of the event and respond accordingly.*/
+
+   /*different types of event object that you should study
+
+    // type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget,
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keyCode */
+
+
+   3 /* e or eventcapture or eventobject :- captures the event and it's properties
+   The console.log(e) statement will log this event object to the console, allowing you to inspect its properties.*/
+
+   //document.getElementById('owl').addEventListener('click',function(e){
+       //console.log(e), false }) //the false is by default even if you don't type it it will be considered false only
+
+    
+   4 /*eventpropogation :- Tracking of the execution of a event from lower to up which is called "Bubbling" or from up to low
+    which is also called "Capturing" is called eventpropogation.
+    
+    in the below code two Eventlitseners is attached to each one of the given event code. 1.) "image" which is a "<ul>""
+     2.) "owl" which is an "<li>", now both the code have 'onClick' event that means function will print something when clicked on it.
+        Now the first event is also applicable for the 2nd event as the .eventLitsener of the 1st function is attached to the parent element"<ul>"
+            So which event will execute first the "child<li>" or "parent<ul>" depends upon the "true or false value of the function"*/
+    //1.) Bubbling : owl clicked , clicked inside the ul (by default)   2.)Capturing :  clicked inside the ul ,  owl clicked
+
+    // document.getElementById('images').addEventListener('click',function(e){
+    //    console.log(" clicked inside the ul ")},false) //print when click on any image
+
+    // document.getElementById('owl').addEventListener('click',function(e){
+    //    console.log(" owl clicked ")}, false) //print when clicked on owl's image
+       
+    5 /* e.stopPropogation() :- stops the "bubbling" of the event and only the parent event will execute*/
+      
+    //  document.getElementById('owl').addEventListener('click',function(e){
+    //    console.log(" owl clicked "); 
+    //    e.stopPropagation()},false)
+
+     6 /* preventDefault() :- prevent the event to execute */
+
+    document.getElementById('google').addEventListener('click', function(e){
+        e.preventDefault(); //prevent google to redirect
+        e.stopPropagation(); //prevent propogation from <li> to <ul>
+        console.log("Google redirection prevented");
+    })
+
+    
+
+      7 /* target :- it is an event object that returns entire source code of the given element to perform different operation on it */
+   
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log(e.target.parentNode) //return the clicked image entire source code with it's parent node
+
+        /* removing events */
+       /* 1st method (not recomended  using it without conditions as it will remove each and everything
+        if clicked on the <li> i.e clicked anywhere outside the image ) */
+
+        // let removeIt = e.target.parentNode
+        // removeIt.remove()
+
+        /* 2nd Method */
+        // let removeIt = e.target.parentNode
+        // removeIt.parentNode.removeChild(removeIt)
+
+       /* Executing 1st method with conditions */
+       8 /*.tagName :- .tagName property is used to retrieve the tag name of an element in the DOM (Document Object Model). 
+       The tag name is the name of the HTML element (e.g., DIV, P, SPAN, H1). 
+       This property is read-only and returns the tag name as a string, always in uppercase.*/
+
+       document.querySelector('#images').addEventListener('click', function(e){
+        console.log(e.target.tagName) 
+        if(e.target.tagName === 'IMG'){  
+            console.log(e.target.id)
+            let removeIt = e.target.parentNode
+             removeIt.remove()
+        }
+    })
+
+
+   </script>
+   </html>

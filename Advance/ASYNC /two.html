@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur code</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+
+    /* JavaScript is a single threaded programming language used for both client-side and server-side web development. 
+    Single threaded means all the code will be executed in sequence. Suppose if a code takes long time to complete, 
+    the browser will freeze for that time to wait for its completion and thus blocking further execution.
+    Using asynchronous JS, we can perform tasks without blocking code execution. Hence it is called non-blocking JavaScript.
+    Let’s take a look at an example of Async JavaScript to understand it better:
+
+ */
+    const sayHitesh = function(){
+        console.log("Hitesh");
+    }
+    const changeText = function(){
+        document.querySelector('h1').innerHTML = "best JS series"
+    }
+
+    /* In JavaScript, .setTimeout() and .setInterval() are functions used to execute 
+    code after a specified delay or repeatedly at specified intervals, respectively.
+
+1. setTimeout()
+setTimeout() is used to execute a function or a block of code once after a specified delay (in milliseconds). 
+
+2. setInterval()
+setInterval() is used to execute a function or block of code repeatedly at a specified interval (in milliseconds).*/
+
+    const changeMe = setTimeout(changeText, 2000)
+
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearTimeout(changeMe)
+        console.log("STOPPED")
+    })
+</script>
+</html>
+

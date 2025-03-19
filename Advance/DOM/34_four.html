@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai Aur Code</title>
+</head>
+<body style = "background-color: #212121; color: #ffff ">
+
+       <ul class = "language">
+    
+          <li> Javascript</li>
+
+       </ul> 
+</body>
+<script>
+//To add language by creating a function to add languages 
+
+/*.appendChild() -- method is used to add a node as the last child of a specified parent node in the Document Object Model (DOM).
+ This method is commonly used for dynamically adding elements to a webpage.*/
+
+    function addLanguage(langName){
+       const li = document.createElement('li') //createing new element
+       li.innerHTML = `${langName}`
+       document.querySelector('.language').appendChild(li)
+    }
+    addLanguage("python")
+    addLanguage("Java")
+
+    //optimised approach
+
+    function optiLanguage(langName){
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langName))
+       document.querySelector('.language').appendChild(li)
+    }
+    optiLanguage("Typescript")
+    optiLanguage("Golang")
+
+    //Edit/Change the value of the 2nd element
+    // 1. either by using same element   or    2. Creating a new element
+
+    //1. 
+    const secondLang = document.querySelector("li:nth-child(2)") //don't give a space after colon or the code will not execute also it's counting starts from 1
+    //secondLang.innerHTML = "Rust"
+
+    //2.
+    //.replaceWith -> Replaces the existing value with a new value
+    const newLi = document.createElement('li') 
+    newLi.textContent = "Rust"
+    secondLang.replaceWith(newLi)
+
+     //edit 1st element
+
+     //..outerHTML property in JavaScript provides a way to get or set the entire HTML 
+     //content of an element, including the element itself. It differs from .innerHTML, 
+     //which only deals with the content inside the element, not the element itself.
+   const thirdLang = document.querySelector('li:first-child')
+   thirdLang.outerHTML = '<li>Typescript</li> '
+
+   //remove Java
+
+   const removeElement = document.querySelector("li:nth-child(3)")
+   console.log(removeElement)
+   removeElement.remove()
+</script>
+</html>

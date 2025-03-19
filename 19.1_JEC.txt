@@ -1,0 +1,13 @@
+JAVASCRIPT EXECUTION CONTEXT
+
+{} --> GLOBAL EC
+
+1. Global Execution Context
+2. Function Execution Context
+3. Eval Execution Context
+
+
+1. MEMORY CREATION PHASE --> Memory Allocation
+2. EXECUTION PHASE --> Performing Arthimetic and other calcution 
+
+
