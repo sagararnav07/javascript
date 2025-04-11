@@ -26,7 +26,7 @@ const myNums = nums.filter( (val) => {
 const myNumbers = [4,7,4,2,5,0,7,6,4,6,8,9,9]
 
 const newNumbers = myNumbers.map((nums) => nums = nums +10) //call back function without using {}
-//console.log(newNumbers);
+console.log(newNumbers);
 
 
 //chaining => it is a process to use multiple map and filter methods to get desired result

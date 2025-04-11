@@ -8,13 +8,13 @@ const myObject = {
 }
 
 //the for of loop will not work as objects are not iterateable by default
-// for (const [key, value] of myObject){
-//     console.log(key, ":-", value);
-//   }
+//for (const [key, value] of myObject){
+    //console.log(key, ":-", value);
+ // }
 
   //we use for in loop in objects to iterarate  
   for (const key in myObject){
-   // console.log(`${key} is ${myObject[key]}`);
+   //console.log(`${key} is ${myObject[key]}`);
   }
   
 

@@ -1,0 +1,113 @@
+NOTES ON DOM MANUPILATION
+
+1.)TO FIND AN ELEMENT WITH THEIR ID
+
+=> document.getElementById('title')
+
+//<h1 id=​"title" class=​"heading">​"DOM learning by Arnav Sagar "<span style=​"display:​none;​">​text text​</span>​</h1>​
+
+
+1.1) TO GET VALUE OF DIFFERENT ELEMENT BY THEIR ID
+=> document.getElementById('title').id
+'title'
+
+
+1.2) TO GET CLASS AND CLASSNAME OF DIFFERENT ELEMENT BY THEIR ID
+=>document.getElementById('title').class
+undefined
+=>document.getElementById('title').className
+'heading'
+
+
+1.3) TO GET VALUE OF DIFFERENT ATTRIBUTE OF ELEMENT BY THEIR ID
+=>document.getElementById('title').getAttribute('id')
+'title'
+
+
+1.4) TO GET VALUE OF DIFFERENT ATTRIBUTE OF ELEMENT BY THEIR ID'
+=>document.getElementById('title').setAttribute('id','sunny')
+
+
+1.5)TO EDIT THE DOCUMENT BY CHANGING PADDING AND COLOR
+=>title.style.backgroundColor = "yellow"
+'yellow'
+=>title.style.padding = "15x"
+'15x'
+
+
+--------------------------------------------------------------
+
+2.0) TEXT CONTENT VS INNER HTML VS INNER TEXT
+
+=>title.textContent  //prints all text even hidden text
+'DOM learning by Arnav Sagar\n            text text'
+
+=>title.innerText //prints only text which is visible
+'DOM learning by Arnav Sagar'
+
+=>title.innerHTML    //prints HTML too    
+'DOM learning by Arnav Sagar\n            <span style="display:none;">text text</span>'
+
+--------------------------------------------------------------
+
+3.0)TO FIND AN ELEMENT WITH THEIR CLASSNAME
+
+=>document.getElementsByClassName('heading')
+HTMLCollection [h1#title.heading, title: h1#title.heading]
+
+3.1) TO GET TITLE OF DIFFERENT ELEMENT BY THEIR CLASSNAME
+
+=> document.getElementsByClassName('heading').title
+<h1 id=​"title" class=​"heading" style=​"background-color:​ green;​">​"DOM learning by Arnav Sagar "<span style=​"display:​none;​">​text text​</span>​</h1>​
+
+-------------------------------------------------------------- 
+
+
+4.QUERYSELECTOR : The querySelector() method returns the first element that matches a CSS selector.
+To return all matches (not only the first), use the querySelectorAll() instead.
+Both querySelector() and querySelectorAll() throw a SYNTAX_ERR exception if the selector(s) is invalid.
+
+
+
+=> document.querySelector('h1')
+
+<h1 id=​"title" class=​"heading" style=​"background-color:​ green;​">​"DOM learning by Arnav Sagar "<span style=​"display:​none;​">​text text​</span>​</h1>​
+
+=>  document.querySelector('h1')
+<h1 id=​"title" class=​"heading" style=​"background-color:​ green;​">​"DOM learning by Arnav Sagar "<span style=​"display:​none;​">​text text​</span>​</h1>​
+
+=>. document.querySelector('#title')
+<h1 id=​"title" class=​"heading" style=​"background-color:​ green;​">​"DOM learning by Arnav Sagar "<span style=​"display:​none;​">​text text​</span>​</h1>​
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

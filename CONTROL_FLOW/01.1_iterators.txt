@@ -5,6 +5,6 @@ iterators we are here talking about here is
 2. WHILE LOOP
 3. DO WHILE LOOP
 4. FOR OF LOOP--> (cannot iterate objects)
-5. FOR IN LOOP --> (cannot directly acces map first has to convert into array)
+5. FOR IN LOOP --> (cannot directly access map first has to convert into array)
 6. FOR EACH LOOP
 

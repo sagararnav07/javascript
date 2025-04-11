@@ -4,10 +4,15 @@ console.log(myArray[1]);
 //myArray methods 
 myArray.push(6);
 myArray.push(7); //to enter element into myArray
-myArray.pop();    //to remove element into myArray
+console.log(myArray);
 
+myArray.pop();    //to remove element into myArray
+console.log(myArray);
 
 myArray.unshift(8) //enter the given element at first and shift compolete myArray to right
+console.log(myArray);
+
+myArray.shift()//opp. of unshift
 myArray.shift()//opp. of unshift
 console.log(myArray);
 
