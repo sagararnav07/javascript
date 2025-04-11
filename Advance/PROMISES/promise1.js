@@ -65,7 +65,6 @@ const promiseThree = new Promise((resolve,reject) => {
 })
 
 
-
 //---------------------------------PROMISE 4-------------------------------------------------------------
 
        1/* CONSUMING PROMISE USING "THEN, CATCH, FINALLY"*/
@@ -146,7 +145,8 @@ The fetch() function is versatile and can be used for various HTTP requests (e.g
 
                         1 //USING "ASYNC/AWAIT"
 
-/* async and await provide a more readable and concise way to work with promises. Instead of chaining .then() and .catch(), you can write code that looks synchronous but handles asynchronous operations.
+/* async and await provide a more readable and concise way to work with promises. Instead of chaining 
+.then() and .catch(), you can write code that looks synchronous but handles asynchronous operations.
 
 Async/Await Syntax
 async: Used to declare an asynchronous function.
