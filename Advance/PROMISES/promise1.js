@@ -8,7 +8,8 @@ A promise can be in one of three states:
 3.Rejected: The operation failed, and the promise has an error or reason for the failure.
 
 Creating a Promise
-You can create a promise using the Promise constructor. It takes a function (called the executor function) with two parameters: resolve and reject.
+You can create a promise using the Promise constructor. It takes a function (called the executor function) 
+with two parameters: resolve and reject.
 
 resolve: This function is called when the operation is successful. It marks the promise as fulfilled.
 reject: This function is called when the operation fails. It marks the promise as rejected.*/
