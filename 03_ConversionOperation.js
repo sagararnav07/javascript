@@ -5,7 +5,7 @@ let score = "33abc";
 
 let valueInNumber = Number(score)
 console.log(typeof(valueInNumber));
-console.log(valueInNumber);
+console.log(`${valueInNumber}`);
 
 //"33" => "33"
 //"33abc"=> NaN```
@@ -18,22 +18,22 @@ console.log(valueInNumber);
 // "" => false
 // "arnav" => true
 
-// let isString = 33
-// let isStringNumber = String(isString);
-// console.log(isString);
-// console.log(typeof(isString));
+let isString = 33
+let isStringNumber = String(isString);
+console.log(isString);
+console.log(typeof(isStringNumber));
 
 
 // *******************************************OPERATIONS***********************************************************************
 
 //Basic operation
 
-// console.log(2 + 2);
-// console.log(2 - 2);
-// console.log(2 * 2);
-// console.log(2 ** 2);
-// console.log(2 / 2);
-// console.log(2 % 2);
+console.log(2 + 2);
+console.log(2 - 2);
+console.log(2 * 2);
+console.log(2 ** 2);
+console.log(2 / 2);
+console.log(2 % 2);
 
 
 

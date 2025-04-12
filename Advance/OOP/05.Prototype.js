@@ -6,7 +6,7 @@ let heroPower = {
     spiderman: "sling",
 
     getSpiderPower: function(){
-       //  console.log(`Spidy power is ${this.spiderman}`);
+        console.log(`Spidy power is ${this.spiderman}`);
     }
 }
 
@@ -25,10 +25,10 @@ Array.prototype.heyHitesh = function(){
     console.log(`Hitesh says hello`);
 }
 
-// heroPower.hitesh()
-// myHeros.hitesh()
-// myHeros.heyHitesh()
-// heroPower.heyHitesh()
+heroPower.hitesh()
+myHeros.hitesh()
+myHeros.heyHitesh()
+//heroPower.heyHitesh()
 
 //--------------------PROTOTYPAL INHERITENCE (old syntax)----------------
 

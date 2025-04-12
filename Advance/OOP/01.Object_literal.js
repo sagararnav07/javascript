@@ -17,5 +17,11 @@ const user = {
 console.log(this);  //It will return current context (global)
 /* now if you perform this same console log as above in the browser you will get a "window" object 
 that contains a whole lot of things */
+user.username = "Sagar"; //current context becomes this
+
+for(const key in user){
+    console.log(`value of ${key} is: ${user[key]}`) //best way to iterate on objects
+}
 
 console.log(user.username, user.getUserDetails())
+
