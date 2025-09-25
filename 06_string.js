@@ -86,3 +86,11 @@ console.log(boy.concat(" WORLD"));
 console.log(boy.normalize());            
 // Output: '   HELLO   ' --> used mainly for Unicode consistency
 
+(function makeStringFlow(x = 10, y = 20){
+   console.log(x + y)
+})
+
+()
+
+
+

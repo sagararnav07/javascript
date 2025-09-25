@@ -30,13 +30,13 @@ const promiseOne = new Promise(function(resolve, reject) {
     // db calls, cryptography, etc.
 
     setTimeout(function(){
-        //console.log('Async task is complete');
+        console.log('Async task is complete');
         resolve(); // This should be called to mark the promise as fulfilled
     }, 1000);
 });
 
 promiseOne.then(function(){
-    //console.log('Promise consumed');
+    console.log('Promise consumed');
 });
 
 
@@ -45,10 +45,10 @@ promiseOne.then(function(){
 //Better syntax than above code as it uses less memory and efficient too
 
 new Promise((resolve,reject)=>{
-   //console.log('Async task 2')
+   console.log('Async task 2')
    resolve()
 }).then(()=>{
-   // console.log('promise 2 is compolete');
+   console.log('promise 2 is compolete');
     
 });
 
@@ -59,10 +59,10 @@ new Promise((resolve,reject)=>{
 const promiseThree = new Promise((resolve,reject) => {
 
     resolve({name : "Arnav Sagar" , email : "arnav.07.sagar@gmail.com" , branch: "CSCE", Roll_no : "2129055"})
-    //console.log(`promise 3 is created of profiile Arnav Sagar`)
+    // console.log(`promise 3 is created of profiile Arnav Sagar`)
 
 }).then((user) => { //let's call the above created "resolve" object as "user" and pass it as a parameter
-    //console.log(user)  //print the object user
+    // console.log(user)  //print the object user
 })
 
 
